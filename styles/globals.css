@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+a > span {
+  display: block !important;
+}
+
 * {
   box-sizing: border-box;
 }
