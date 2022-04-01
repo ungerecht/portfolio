@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <p className={styles.description}>Web Developer</p>
 
         <div className={styles.button}>
-          <a href='#About'>
+          <a href='#about'>
             <Image
               src='/down-arrow.svg'
               alt='Next Page'
@@ -31,29 +31,33 @@ const Home: NextPage = () => {
         </div>
       </section>
       <main>
-        <section className={styles.about}>
-          <Image
-            src='/gilfoyle.webp'
-            alt='About Me Image'
-            width={300}
-            height={260}
-          />
-          <h3 className={styles.title}>
-            Hello
-            <br />
-            I'm Kevin Ungerecht
-          </h3>
-          <p className={styles.description}>
-            I build modern web apps with React.
-          </p>
-          <section className={styles.tech}>
-            <h3 className={styles.title}>What I use</h3>
-          </section>
+        <section className={styles.about} id='about'>
+          <div className={styles.aboutClipped}>
+            <Image
+              src='/gilfoyle.webp'
+              alt='About Me Image'
+              width={300}
+              height={260}
+            />
+            <h3 className={styles.title}>
+              Hello
+              <br />
+              I'm Kevin Ungerecht
+            </h3>
+            <p className={styles.description}>
+              I build modern web apps with React.
+            </p>
+            <section className={styles.tech}>
+              <h3 className={styles.title}>What I use</h3>
+            </section>
+          </div>
         </section>
-        <section className={styles.projects}>
-          <h3 className={styles.title}>My Projects</h3>
+        <section className={styles.projects} id='projects'>
+          <div className={styles.projectsClipped}>
+            <h3 className={styles.title}>My Projects</h3>
+          </div>
         </section>
-        <section className={styles.contact}>
+        <section className={styles.contact} id='contact'>
           <h3 className={styles.title}>Let's get in touch</h3>
         </section>
       </main>
