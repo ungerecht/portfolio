@@ -1,18 +1,21 @@
-.container {
-  padding: 0 3rem;
+.title,
+.intro,
+.description {
+  color: white;
 }
 
 .title {
   margin-bottom: 30px;
+  font-size: 36px;
+}
+
+.intro {
+  margin-bottom: 0;
+  font-size: calc(21px + 1.5vw);
 }
 
 .description {
-  margin: 1rem 0;
-}
-
-.title,
-.description {
-  color: white;
+  font-size: calc(16px + 0.5vw);
 }
 
 .home {
@@ -22,87 +25,25 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(30, 42, 66);
-  position: relative;
-  padding: 100px 0;
+  color: white;
+  padding: 16px;
 }
 
-.home > .title {
-  line-height: 1.15;
-  font-size: 4rem;
+.home > h1 {
+  font-size: calc(42px + 1.5vw);
 }
 
-.home > .description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.home > p {
+  font-size: calc(21px + 1.25vw);
 }
 
-.about {
-  min-height: 100vh;
+.section {
   display: flex;
-  background-color: rgb(124, 0, 0);
-  position: relative;
-  top: 0;
-  z-index: 0;
-}
-
-.aboutClipped {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
+  background-color: blueviolet;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: black;
-  position: relative;
-  padding: 200px 0;
-  z-index: 1;
-  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
-}
-
-.about > .title {
-  line-height: 1;
-  font-size: 3rem;
-}
-
-.about > .description {
-  line-height: 1.5;
-  font-size: 1.25rem;
-}
-
-.projects {
-  min-height: 100vh;
-  display: flex;
-  background-color: rgb(0, 56, 56);
-  position: relative;
-  top: -1;
-  z-index: 0;
-}
-
-.projectsClipped {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(124, 0, 0);
-  position: relative;
-  padding: 50px 0;
-  z-index: 1;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-}
-
-.contact {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(0, 56, 56);
-  position: relative;
-  padding: 50px 0;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+  margin-top: 50px;
+  border: 5px solid black;
+  padding: 30px;
 }
