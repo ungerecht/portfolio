@@ -10,7 +10,8 @@ a {
   text-decoration: none;
 }
 
-a > span {
+a > span,
+button > span {
   display: block !important;
 }
 
