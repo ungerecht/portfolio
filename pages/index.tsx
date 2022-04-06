@@ -2,7 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
-import ProjectCard from '../components/ProjectCard'
+import Projects from '../components/Projects'
+
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Ungerecht</title>
         <meta name='description' content='Kevin Ungerecht Portfolio' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
@@ -56,13 +58,7 @@ const Home: NextPage = () => {
         <section className={styles.projects} id='projects'>
           <div className={styles.projectsClipped}>
             <h3 className={styles.title}>My Projects</h3>
-            <ProjectCard
-              name='RetroWebSynth'
-              imgUrl='/synthPreview.png'
-              tech={['react', 'typescript']}
-              link='https://retro-synth.herokuapp.com'
-              gitLink='https://github.com/ungerecht/retro-web-synth'
-            />
+            <Projects />
           </div>
         </section>
         <section className={styles.contact} id='contact'>
