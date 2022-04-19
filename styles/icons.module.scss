@@ -1,8 +1,0 @@
-@import 'node_modules/pixel-borders/src/styles/pixel-borders/pixel-borders-mixins';
-
-.icon {
-  @include pixel-borders(1);
-  background-color: rgb(96, 162, 206);
-  width: 48px;
-  height: 48px;
-}
