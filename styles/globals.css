@@ -3,11 +3,36 @@
   src: url('../fonts/VT323-Regular.ttf');
 }
 
+@font-face {
+  font-family: hellovetica;
+  src: url('../fonts/hellovetica.ttf');
+}
+
+@font-face {
+  font-family: PressStart2P;
+  src: url('../fonts/PressStart2P-Regular.ttf');
+}
+
+@font-face {
+  font-family: Superscript;
+  src: url('../fonts/SUPERSCR.TTF');
+}
+
+@font-face {
+  font-family: Minecraft;
+  src: url('../fonts/Minecraft.ttf');
+}
+
+@font-face {
+  font-family: Rainyhearts;
+  src: url('../fonts/rainyhearts.ttf');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: VT323;
+  font-family: hellovetica;
 }
 
 a {
@@ -18,8 +43,4 @@ a {
 a > span,
 button > span {
   display: block !important;
-}
-
-* {
-  box-sizing: border-box;
 }
