@@ -2,14 +2,14 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
+import Profile from '../components/Profile'
 import Projects from '../components/Projects'
-
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Head>
         <title>Ungerecht</title>
         <meta name='description' content='Kevin Ungerecht Portfolio' />
@@ -18,50 +18,30 @@ const Home: NextPage = () => {
       </Head>
 
       <section className={styles.home}>
-        <h1 className={styles.title}>Kevin Ungerecht</h1>
-
-        <p className={styles.description}>Web Developer</p>
-
+        <h1>Kevin Ungerecht</h1>
+        <p>Web Developer</p>
         <div className={styles.button}>
           <a href='#about'>
-            <Image
-              src='/down-arrow.svg'
-              alt='Next Page'
-              width={48}
-              height={48}
-            />
+            <div className={styles.image}>
+              <Image
+                src='/down-arrow.svg'
+                alt='Next Page'
+                width={48}
+                height={48}
+              />
+            </div>
           </a>
         </div>
       </section>
+
       <main>
-        <section className={styles.about} id='about'>
-          <div className={styles.aboutClipped}>
-            <Image
-              src='/gilfoyle.webp'
-              alt='About Me Image'
-              width={300}
-              height={260}
-            />
-            <h3 className={styles.title}>
-              Hello
-              <br />
-              I'm Kevin Ungerecht
-            </h3>
-            <p className={styles.description}>
-              I build modern web apps with React.
-            </p>
-            <section className={styles.tech}>
-              <h3 className={styles.title}>What I use</h3>
-            </section>
-          </div>
+        <section className={styles.section} id='about'>
+          <Profile />
         </section>
-        <section className={styles.projects} id='projects'>
-          <div className={styles.projectsClipped}>
-            <h3 className={styles.title}>My Projects</h3>
-            <Projects />
-          </div>
+        <section className={styles.section} id='projects'>
+          <h3 className={styles.title}>My Projects</h3>
         </section>
-        <section className={styles.contact} id='contact'>
+        <section className={styles.section} id='contact'>
           <h3 className={styles.title}>Let's get in touch</h3>
         </section>
       </main>
