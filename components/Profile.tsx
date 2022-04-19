@@ -1,5 +1,14 @@
 import Image from 'next/image'
-// import { react, typescript } from '../icons'
+import {
+  react,
+  javascript,
+  html,
+  css,
+  git,
+  next,
+  sass,
+  typescript,
+} from '../icons'
 import styles from '../styles/Profile.module.scss'
 
 const Profile = () => {
@@ -37,9 +46,21 @@ const Profile = () => {
         </div>
         <div className={styles.section}>
           <h3 className={styles.title}>What I use</h3>
+          <div className={styles.row}>
+            <div className={styles.icon}>{react}</div>
+            <div className={styles.icon}>{javascript}</div>
+            <div className={styles.icon}>{git}</div>
+            <div className={styles.icon}>{html}</div>
+            <div className={styles.icon}>{css}</div>
+          </div>
         </div>
         <div className={styles.section}>
           <h3 className={styles.title}>What I'm Learning</h3>
+          <div className={styles.row}>
+            <div className={styles.icon}>{next}</div>
+            <div className={styles.icon}>{typescript}</div>
+            <div className={styles.icon}>{sass}</div>
+          </div>
         </div>
       </div>
     </div>
