@@ -39,15 +39,23 @@
 
 .profile {
   display: flex;
+  margin: 24px auto;
   @include pixel-profile(2, 7px, black, rgb(75, 121, 122));
   position: relative;
   width: 60vw;
   background-color: cadetblue;
+  z-index: -1;
 }
 
 .column {
   flex-direction: column;
   padding: 32px 24px 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
 }
 
 .left {
@@ -63,11 +71,16 @@
 }
 
 .image {
-  @include pixel-borders(1, 5px);
+  @include pixel-borders(2, 5px);
   image-rendering: pixelated;
   width: 320px;
   height: 320px;
   position: relative;
+  background-color: none;
+
+  > span > img {
+    z-index: -1;
+  }
 }
 
 .title {
@@ -82,9 +95,9 @@
 
 .title,
 .subtitle {
-  @include pixel-borders(1, 5px);
+  @include pixel-borders(2, 5px);
   font-family: Superscript;
-  padding: 12.8px;
+  padding: 12px 12px 10px;
   text-align: center;
   height: fit-content;
   width: fit-content;
@@ -95,10 +108,29 @@
   font-size: 12px;
   margin: 0;
   padding: 16px 8px 0px 16px;
+  width: fit-content;
 }
 
 .icon {
-  @include pixel-borders(1, 5px);
-  width: 64px;
-  height: 64px;
+  @include pixel-box(
+    1,
+    4px,
+    rgb(96, 162, 206),
+    $border-color: black,
+    $border-inset: true,
+    $border-inset-size: 4px,
+    $border-inset-sides: 'all'
+  );
+  width: 56px;
+  height: 56px;
+  padding: 4px;
+
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
 }
