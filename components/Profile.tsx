@@ -8,12 +8,15 @@ import {
   next,
   sass,
   typescript,
+  bootstrap,
+  jest,
 } from '../icons'
 import styles from '../styles/Profile.module.scss'
+import React from 'react'
 
 const Profile = () => {
   return (
-    <div className={styles.profile}>
+    <div id='about' className={styles.profile}>
       <div className={`${styles.column} ${styles.left}`}>
         <div className={styles.section}>
           <div className={styles.image}>
@@ -47,20 +50,74 @@ const Profile = () => {
         <div className={styles.section}>
           <h3 className={styles.title}>What I use</h3>
           <div className={styles.row}>
-            <div className={styles.icon}>{react}</div>
-            <div className={styles.icon}>{javascript}</div>
-            <div className={styles.icon}>{git}</div>
-            <div className={styles.icon}>{html}</div>
-            <div className={styles.icon}>{css}</div>
+            <div className={styles.icon}>
+              {react}
+              <div className={styles.tooltip}>
+                <span>React</span>
+                <div className={styles.arrow} />
+              </div>
+            </div>
+            <div className={styles.icon}>
+              {typescript}
+              <div className={styles.tooltip}>
+                <span>TypeScript</span>
+                <div className={styles.arrow} />
+              </div>
+            </div>
+            <div className={styles.icon}>
+              {next}
+              <div className={styles.tooltip}>
+                <span>Next.js</span>
+                <div className={styles.arrow} />
+              </div>
+            </div>
+            <div className={styles.icon}>
+              {git}
+              <div className={styles.tooltip}>
+                <span>Git</span>
+                <div className={styles.arrow} />
+              </div>
+            </div>
+            <div className={styles.icon}>
+              {bootstrap}
+              <div className={styles.tooltip}>
+                <span>Bootstrap</span>
+                <div className={styles.arrow} />
+              </div>
+            </div>
+            <div className={styles.icon}>
+              {sass}
+              <div className={styles.tooltip}>
+                <span>Sass</span>
+                <div className={styles.arrow} />
+              </div>
+            </div>
+            <div className={styles.icon}>
+              {jest}
+              <div className={styles.tooltip}>
+                <span>Jest</span>
+                <div className={styles.arrow} />
+              </div>
+            </div>
+            <div className={styles.icon}>
+              {html}
+              <div className={styles.tooltip}>
+                <span>HTML</span>
+                <div className={styles.arrow} />
+              </div>
+            </div>
+            <div className={styles.icon}>
+              {css}
+              <div className={styles.tooltip}>
+                <span>CSS</span>
+                <div className={styles.arrow} />
+              </div>
+            </div>
           </div>
         </div>
         <div className={styles.section}>
           <h3 className={styles.title}>What I'm Learning</h3>
-          <div className={styles.row}>
-            <div className={styles.icon}>{next}</div>
-            <div className={styles.icon}>{typescript}</div>
-            <div className={styles.icon}>{sass}</div>
-          </div>
+          <div className={styles.row}></div>
         </div>
       </div>
     </div>
