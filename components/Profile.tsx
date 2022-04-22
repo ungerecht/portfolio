@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import {
   react,
-  javascript,
   html,
   css,
   git,
@@ -15,6 +14,7 @@ import styles from '../styles/Profile.module.scss'
 import React from 'react'
 
 const Profile = () => {
+  const techs = [react, typescript, next, git, sass, bootstrap, jest]
   return (
     <div id='about' className={styles.profile}>
       <div className={`${styles.column} ${styles.left}`}>
@@ -31,92 +31,84 @@ const Profile = () => {
         </div>
         <div className={styles.section}>
           <h3 className={styles.title}>Kevin Ungerecht</h3>
-          <h4 className={styles.subtitle}>Olympia, WA</h4>
+          <h4 className={styles.subtitle}>
+            <div className={styles.icon}>
+              <Image
+                src='/globe-med.png'
+                alt='globe icon'
+                quality={100}
+                layout='fill'
+              />
+            </div>
+            Olympia, WA
+          </h4>
         </div>
       </div>
       <div className={`${styles.column} ${styles.right}`}>
         <div className={styles.section}>
-          <h3 className={styles.title}>Biography</h3>
+          <h3 className={styles.title}>
+            <div className={styles.icon}>
+              <Image
+                src='/book-med.png'
+                alt='book icon'
+                quality={100}
+                layout='fill'
+              />
+            </div>
+            About me
+          </h3>
           <p className={styles.paragraph}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit
-            laoreet id donec ultrices. Venenatis urna cursus eget nunc
-            scelerisque viverra mauris in aliquam. Consequat id porta nibh
-            venenatis cras sed. Vitae suscipit tellus mauris a. Suspendisse in
-            est ante in nibh mauris cursus. Malesuada nunc vel risus commodo
-            viverra. Ultrices neque ornare aenean euismod elementum.
+            Hello! My name is Kevin and I am a software engineer specializing in
+            front-end web development.
+            <br />
+            <br /> I've always had a passion for technology, especially the
+            internet and video games, which led me to pursue my Bachelor's
+            degree in Computer Information Systems.
+            <br />
+            <br /> While attending Eastern Washington University I fell in love
+            with coding and problem solving, but especially found satisfaction
+            in combining the logical aspect of programming with the visual
+            aspect of design, which web application development provides.
           </p>
         </div>
         <div className={styles.section}>
-          <h3 className={styles.title}>What I use</h3>
+          <h3 className={styles.title}>
+            <div className={styles.icon}>
+              <Image
+                src='/wrench-med.png'
+                alt='wrench icon'
+                quality={100}
+                layout='fill'
+              />
+            </div>
+            What I use
+          </h3>
           <div className={styles.row}>
-            <div className={styles.icon}>
-              {react}
-              <div className={styles.tooltip}>
-                <span>React</span>
-                <div className={styles.arrow} />
-              </div>
-            </div>
-            <div className={styles.icon}>
-              {typescript}
-              <div className={styles.tooltip}>
-                <span>TypeScript</span>
-                <div className={styles.arrow} />
-              </div>
-            </div>
-            <div className={styles.icon}>
-              {next}
-              <div className={styles.tooltip}>
-                <span>Next.js</span>
-                <div className={styles.arrow} />
-              </div>
-            </div>
-            <div className={styles.icon}>
-              {git}
-              <div className={styles.tooltip}>
-                <span>Git</span>
-                <div className={styles.arrow} />
-              </div>
-            </div>
-            <div className={styles.icon}>
-              {bootstrap}
-              <div className={styles.tooltip}>
-                <span>Bootstrap</span>
-                <div className={styles.arrow} />
-              </div>
-            </div>
-            <div className={styles.icon}>
-              {sass}
-              <div className={styles.tooltip}>
-                <span>Sass</span>
-                <div className={styles.arrow} />
-              </div>
-            </div>
-            <div className={styles.icon}>
-              {jest}
-              <div className={styles.tooltip}>
-                <span>Jest</span>
-                <div className={styles.arrow} />
-              </div>
-            </div>
-            <div className={styles.icon}>
-              {html}
-              <div className={styles.tooltip}>
-                <span>HTML</span>
-                <div className={styles.arrow} />
-              </div>
-            </div>
-            <div className={styles.icon}>
-              {css}
-              <div className={styles.tooltip}>
-                <span>CSS</span>
-                <div className={styles.arrow} />
-              </div>
-            </div>
+            {techs.map((tech) => {
+              return (
+                <div className={styles.techIcon}>
+                  {tech}
+                  <div className={styles.tooltip}>
+                    <span>{tech.props.name}</span>
+                    <div className={styles.arrow} />
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
         <div className={styles.section}>
-          <h3 className={styles.title}>What I'm Learning</h3>
+          <h3 className={styles.title}>
+            <div className={styles.icon}>
+              <Image
+                src='/heart-med.png'
+                alt='heart icon'
+                quality={100}
+                layout='fill'
+              />
+            </div>
+            Interests
+          </h3>
           <div className={styles.row}></div>
         </div>
       </div>
