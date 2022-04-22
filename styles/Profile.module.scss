@@ -90,16 +90,18 @@
 }
 
 .subtitle {
-  font-size: 24px;
+  font-size: 28px;
   margin: 16px auto 0 auto;
 }
 
 .title,
 .subtitle {
+  display: flex;
   @include pixel-borders(2, 5px);
   font-family: Superscript;
   padding: 12px 12px 10px;
   text-align: center;
+  align-items: center;
   height: fit-content;
   width: fit-content;
   background-color: rgb(96, 162, 206);
@@ -113,6 +115,14 @@
 }
 
 .icon {
+  image-rendering: pixelated;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-right: 12px;
+}
+
+.techIcon {
   position: relative;
   width: 48px;
   height: 48px;
@@ -123,7 +133,7 @@
   }
 
   &:not(:last-child) {
-    margin-right: auto;
+    margin-right: 12px;
   }
 
   &:hover {
@@ -131,6 +141,7 @@
     .arrow {
       visibility: visible;
     }
+    top: -4px;
   }
 }
 
