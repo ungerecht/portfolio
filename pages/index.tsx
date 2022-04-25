@@ -33,11 +33,8 @@ const Home: NextPage = () => {
           </a>
         </div>
       </section>
-
       <main>
-        <section className={styles.section} id='about'>
-          <Profile />
-        </section>
+        <Profile />
         <section className={styles.section} id='projects'>
           <h3 className={styles.title}>My Projects</h3>
         </section>
