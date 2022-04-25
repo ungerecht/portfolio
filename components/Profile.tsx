@@ -86,7 +86,7 @@ const Profile = () => {
           <div className={styles.row}>
             {techs.map((tech) => {
               return (
-                <div className={styles.techIcon}>
+                <div className={styles.techIcon} key={tech.props.name}>
                   {tech}
                   <div className={styles.tooltip}>
                     <span>{tech.props.name}</span>
