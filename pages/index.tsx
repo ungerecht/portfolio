@@ -37,6 +37,7 @@ const Home: NextPage = () => {
         <Profile />
         <section className={styles.section} id='projects'>
           <h3 className={styles.title}>My Projects</h3>
+          <Projects />
         </section>
         <section className={styles.section} id='contact'>
           <h3 className={styles.title}>Let's get in touch</h3>
