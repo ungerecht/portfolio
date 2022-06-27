@@ -18,7 +18,7 @@ const projects: project[] = [
     title: 'Crypto Tracker',
     imgSrc: '/crypto.png',
     text: 'Insert Text Here',
-    demo: 'https://ungerecht-crypto-tracker.herokuapp.com',
+    demo: 'https://cryptocoinstracker.herokuapp.com/',
     github: 'https://github.com/ungerecht/crypto-tracker',
   },
 ]
