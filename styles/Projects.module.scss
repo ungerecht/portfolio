@@ -1,19 +1,22 @@
+@import 'node_modules/pixel-borders/src/styles/pixel-borders/pixel-borders-mixins';
+
 .projects {
   display: flex;
   gap: 6px;
 }
 
 .project {
-  border: 2px solid black;
+  @include pixel-borders(2, 5px);
   border-radius: 6px;
-  padding: 6px;
+  padding: 12px;
+  background-color: #8942ff;
+  // background-color: #005085;
 }
 
 .image {
   width: 330px;
   aspect-ratio: 1.75 / 1;
   position: relative;
-  background-color: none;
 }
 
 .description {
@@ -33,4 +36,12 @@
   height: fit-content;
   padding: 6px;
   background-color: black;
+}
+
+.title {
+  font-size: 28px;
+  font-family: Superscript;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 12px;
 }
