@@ -10,7 +10,7 @@ const Projects = () => {
       {projects.map((project) => {
         return (
           <div key={project.title} className={styles.project}>
-            <h4>{project.title}</h4>
+            <h4 className={styles.title}>{project.title}</h4>
             <div className={styles.image}>
               <Image
                 src={project.imgSrc}
